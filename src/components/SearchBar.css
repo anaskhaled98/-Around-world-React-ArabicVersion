@@ -1,0 +1,13 @@
+.custom-input .ant-input {
+  border-radius: 8px !important;
+  padding: 10px;
+  background-color: transparent;
+}
+
+.dark .ant-input {
+  color: #f3f4f6;
+}
+
+.custom-input .ant-input-group-addon {
+  display: none;
+}

@@ -1,0 +1,14 @@
+.ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+  height: 40px;
+  display: felx;
+  align-items: center;
+}
+
+.dark .ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
+  color: #f3f4f6;
+}
+
+.dark .ant-select-arrow {
+  color: #f3f4f6;
+}
