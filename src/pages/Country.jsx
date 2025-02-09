@@ -48,7 +48,7 @@ const Country = () => {
                   <p className="<p mb-0 flex items-center gap-1">
                     <span className="font-semibold">{t("region")}: </span>
                     <span className="font-light">
-                      {t(`regions.${countryInfo.region}`)}
+                      {t(`regions.${countryInfo.region.toLowerCase()}`)}
                     </span>
                   </p>
                   <p className="<p mb-0 flex flex-col items-center gap-1 self-start">

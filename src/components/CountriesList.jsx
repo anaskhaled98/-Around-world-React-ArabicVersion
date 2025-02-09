@@ -22,7 +22,7 @@ const CountriesList = ({ filteredCountries: countries }) => {
                   ? country.population.toLocaleString("ar-EG")
                   : country.population
               }
-              region={t(`regions.${country.region}`)}
+              region={t(`regions.${country.region.toLowerCase()}`)}
               capital={country.capital?.[0]}
               flag={country.flags?.svg}
               routingParameter={country.name.common}
