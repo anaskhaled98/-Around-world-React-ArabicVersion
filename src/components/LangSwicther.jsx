@@ -11,18 +11,28 @@ const LangSwitcher = () => {
   const { i18n } = useTranslation();
   const htmlElementRef = useRef(document.documentElement);
 
+  const changeRootLangAndDirection = (element, language) => {
+    if (!element.current) return;
+
+    if (language === "ar") {
+      element.current.dir = "rtl";
+      element.current.lang = "ar";
+    } else {
+      element.current.dir = "ltr";
+      element.current.lang = "en";
+    }
+  };
+
   const switchLang = (lng) => {
     i18n.changeLanguage(lng);
-    lng === "ar"
-      ? (htmlElementRef.current.dir = "rtl")
-      : (htmlElementRef.current.dir = "ltr");
+    changeRootLangAndDirection(htmlElementRef, lng);
   };
 
   useEffect(() => {
     const language = localStorage.getItem("i18nextLng");
 
-    const setLanguageDirection = (lang) => {
-      htmlElementRef.current.dir = lang === "ar" ? "rtl" : "ltr";
+    const setLanguageDirection = (lng) => {
+      changeRootLangAndDirection(htmlElementRef, lng);
     };
 
     if (language) setLanguageDirection(language);
